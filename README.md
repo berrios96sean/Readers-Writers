@@ -23,3 +23,28 @@ On the verification loop the writer should print:
 Printf(“\n This is the %d th writer verifying value i = %d \n”, writerID, i );
 
 # Test Case
+
+The test case will be in the following format:
+2,2
+1
+-1
+2
+-2
+
+The first line will have number of readers and number of writers consecutively, followed by R+W numbers showing the ready Q. The positive numbers are readers, the negative numbers are writers. Always have the initial scratch pad variable i = 0;
+In this case the output will be
+This is the 1 th reader reading value i = 0 for the first time
+
+ This is the 1 th reader reading value i = 0 for the second time
+
+ This is the 1 th writer writing value i = 1
+
+ This is the 1 th writer verifying value i = 1
+
+ This is the 2 th reader reading value i = 1 for the first time
+
+ This is the 2 th reader reading value i = 1 for the second time
+
+ This is the 2 th writer writing value i = 2
+
+ This is the 2 th writer verifying value i = 2
